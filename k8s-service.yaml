@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-k8s-game-service
+spec:
+  selector:
+    app: go-k8s-game
+  ports:
+    - protocol: TCP
+      port: 30000
+      targetPort: 7076
+  type: LoadBalancer
